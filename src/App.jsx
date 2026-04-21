@@ -1,9 +1,14 @@
-import React from "react";
+// import { div } from "motion/react-client";
+import Hero from "./components/Hero";
 
 
 function App(){
     return(
-        <h1>portfolio base</h1>
+        <div>
+            <Hero />
+            
+        </div>
+        
     )
 }
 
