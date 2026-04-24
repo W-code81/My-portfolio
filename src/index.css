@@ -30,37 +30,37 @@
 }
 
 @font-face {
-  font-family: Chillax-Bold;
+  font-family: Chillax;
   src: url("/fonts/Chillax/Chillax-Bold.otf") format("opentype");
   font-weight: 700;
 }
 
 @font-face {
-  font-family: Chillax-Regular;
+  font-family: Chillax;
   src: url("/fonts/Chillax/Chillax-Regular.otf") format("opentype");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: Chillax-Semibold;
+  font-family: Chillax;
   src: url("/fonts/Chillax/Chillax-Semibold.otf") format("opentype");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: Chillax-Medium;
+  font-family: Chillax;
   src: url("/fonts/Chillax/Chillax-Medium.otf") format("opentype");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: Chillax-Light;
+  font-family: Chillax;
   src: url("/fonts/Chillax/Chillax-Light.otf") format("opentype");
   font-weight: 300;
 }
 
 @font-face {
-  font-family: Chillax-Extralight;
+  font-family: Chillax;
   src: url("/fonts/Chillax/Chillax-Extralight.otf") format("opentype");
   font-weight: 200;
 }
