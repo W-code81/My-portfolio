@@ -1,32 +1,58 @@
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=JetBrains+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-bg-dark text-white font-display overflow-x-hidden;
-  }
-  ::selection {
-    @apply bg-primary text-white;
-  }
+/* define your theme tokens */
+@theme {
+  --color-bg-dark: #0f0518;
+  --color-card-dark: #1a0b2e;
+  --color-card-darker: #1e0a24;
+  --color-primary: #c026d3;
+  --color-primary-dark: #a21caf;
+  --color-primary-alt: #d946ef;
+  --color-accent: #7c3aed;
+
+  --font-display: 'Chillax', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
-@layer utilities {
-  .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
-  }
-  .text-glow {
-    text-shadow: 0 0 10px rgba(192, 38, 211, 0.6);
-  }
-  .hide-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+/* base styles — plain CSS now, no @apply */
+body {
+  background-color: #0f0518;
+  color: white;
+  font-family: 'Chillax', sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #c026d3;
+  color: white;
+}
+
+/* custom utilities still work */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(192, 38, 211, 0.6);
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -65,11 +91,7 @@
   font-weight: 200;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 /* h1 {
   font-family: Chillax-Medium, sans-serif;
