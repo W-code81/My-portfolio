@@ -5,42 +5,63 @@ import Button from "./Btn";
 import { Download, MoveDown } from "lucide-react";
 
 function CreateBtn({ text, onClick, icon: Icon }) {
-    return (
-        <Button 
-            key={text}
-            text={text} 
-            onClick={onClick} 
-            icon={Icon}
-        />
-    );
+  return (
+    <Button
+      key={text}
+      text={text}
+      onClick={onClick}
+      icon={Icon}
+    />
+  );
 }
 
 const btnInfo = [
-    { text: "Contact Me", icon: MoveDown, onClick: () => alert("Contact me clicked!") },
-    { text: "Download Resume", icon: Download, onClick: () => alert("Download resume clicked!") }
+  { text: "Contact Me", icon: MoveDown, onClick: () => alert("Contact me clicked!") },
+  { text: "Download Resume", icon: Download, onClick: () => alert("Download resume clicked!") },
 ];
 
 function Hero() {
-    return (
-        <div>
-            <div className="hero">
-                <h1>BUILDING THE <br />WEB OF <br />TOMMOROW</h1>
+  return (
+    <div className="bg-bg-dark min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden">
 
-                <p>I craft beautiful, functional web experiences with modern technologies.<br />
-                Passionate about clean code, elegant design, and solving complex problems.</p>
+      {/* glow blob */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
 
-                <div>
-                    {btnInfo.map(CreateBtn)}
-                </div>
-                
+      <section className="relative z-10 max-w-4xl w-full text-center flex flex-col items-center gap-12">
 
-            </div>
+        {/* Available for hire badge */}
 
-            <About />
-            
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/20 text-primary text-xs font-mono tracking-widest mb-4">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-primary"></span>
+          </span>
+          AVAILABLE FOR HIRE
         </div>
 
-    )
+        {/* Hero heading */}
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase leading-tight mb-8">
+          BUILDING THE <br />
+          WEB OF <br />
+          <span className="text-primary text-glow">TOMORROW</span>
+        </h1>
+
+        {/* Hero subheading */}
+        <p className="text-gray-400 text-lg max-w-xl leading-relaxed">
+          I craft beautiful, functional web experiences with modern technologies.
+          Passionate about clean code, elegant design, and solving complex problems.
+        </p>
+
+        {/* Call-to-action buttons */}
+        <div className="flex flex-row gap-8">
+          
+          {btnInfo.map(CreateBtn)}
+        </div>
+        
+
+      </section>
+    </div>
+  )
 }
 
 export default Hero;
