@@ -4,20 +4,21 @@ import About from "./About";
 import Button from "./Btn";
 import { Download, MoveDown } from "lucide-react";
 
-function CreateBtn({ text, onClick, icon: Icon }) {
+function CreateBtn({ text, onClick, icon: Icon , variant }) {
   return (
     <Button
       key={text}
       text={text}
       onClick={onClick}
       icon={Icon}
+      variant={variant}
     />
   );
 }
 
 const btnInfo = [
-  { text: "Contact Me", icon: MoveDown, onClick: () => alert("Contact me clicked!") },
-  { text: "Download Resume", icon: Download, onClick: () => alert("Download resume clicked!") },
+  { text: "Contact Me", icon: MoveDown, variant:"primary", onClick: () => alert("Contact me clicked!") },
+  { text: "Resume", icon: Download, variant:"secondary", onClick: () => alert("Download resume clicked!") },
 ];
 
 function Hero() {
