@@ -46,7 +46,17 @@ body {
 }
 
 .padding{
-  padding: 24px
+  padding: 12px 20px;
+}
+
+@media (max-width: 768px) {
+  .padding {
+    padding: 14px;
+  }
+}
+
+.hero-text{
+  font-size: clamp(0.9rem,2.5vw,1.125rem);
 }
 
 .hide-scrollbar::-webkit-scrollbar {
