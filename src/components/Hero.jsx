@@ -18,7 +18,7 @@ function CreateBtn({ text, onClick, icon: Icon , variant }) {
 
 const btnInfo = [
   { text: "Contact Me", icon: MoveDown, variant:"primary", onClick: () => alert("Contact me clicked!") },
-  { text: "Resume", icon: Download, variant:"secondary", onClick: () => alert("Download resume clicked!") },
+  { text: "Download Resume", icon: Download, variant:"secondary", onClick: () => alert("Download resume clicked!") },
 ];
 
 function Hero() {
