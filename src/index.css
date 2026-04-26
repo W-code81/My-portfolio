@@ -45,6 +45,10 @@ body {
   scrollbar-width: none;
 }
 
+.padding{
+  padding: 24px
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
