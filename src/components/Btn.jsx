@@ -1,6 +1,6 @@
 function Button(props) {
 
-  const base = "padding cursor-pointer rounded-full h-10 w-fit px-10 py-3 uppercase transition-all duration-300 text-sm tracking-wide flex items-center justify-center gap-3 whitespace-nowrap hover:scale-105";
+  const base = "padding text-sm cursor-pointer rounded-full h-10 w-fit uppercase transition-all duration-300 tracking-wide flex items-center justify-center gap-3 whitespace-nowrap hover:scale-105";
 
   const styles = {
     primary:"bg-primary hover:shadow-[0_0_25px_rgba(192,38,211,0.6)]",
