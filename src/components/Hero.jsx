@@ -1,8 +1,7 @@
 import React from "react";
 // import { motion } from "motion/react";
-import About from "./About";
 import Button from "./Btn";
-import { Download, MoveDown } from "lucide-react";
+import { Download, MoveDown , ChevronsDown } from "lucide-react";
 
 function CreateBtn({ text, onClick, icon: Icon , variant }) {
   return (
@@ -52,6 +51,12 @@ function Hero() {
           I craft beautiful, functional web experiences with modern technologies.
           Passionate about clean code, elegant design, and solving complex problems.
         </p>
+        
+        {/* Animated Arrow */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden sm:block ">
+        <span className="text-purple-400/50"
+          ><ChevronsDown /></span>
+        </div>
 
         {/* Call-to-action buttons */}
         <div className="flex flex-col items-center justify-center sm:flex-row gap-4">

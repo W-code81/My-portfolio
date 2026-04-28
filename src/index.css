@@ -59,6 +59,30 @@ body {
   font-size: clamp(0.9rem,2.5vw,1.125rem);
 }
 
+.neon-sm{
+  box-shadow: 0 0 10px rgba(192, 38, 211, 0.3);
+}
+
+.neon-md{
+  box-shadow: 0 0 20px rgba(192, 38, 211, 0.4);
+}
+
+.neon-lg{
+  box-shadow: 0 0 30px rgba(192, 38, 211, 0.5);
+}
+
+.neon-xl{
+  box-shadow: 0 0 40px rgba(192, 38, 211, 0.6);
+}
+
+.neon-btn{
+  box-shadow:0 0 15px rgba(192, 38, 211, 0.4)
+}
+
+.neon-text{
+  text-shadow: 0 0 10px rgba(192, 38, 211, 1);
+}
+
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -67,6 +91,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* outline: 1px solid red */
 }
 
 @font-face {
