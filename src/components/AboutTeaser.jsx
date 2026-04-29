@@ -2,16 +2,16 @@ import TerminalCard from './TerminalCard';
 
 function AboutTeaser() {
   return (
-    <section  className="flex flex-row items-center justify-center py-32 px-6 bg-bg-dark relative overflow-hidden">
+    <section  className="flex flex-row items-center justify-center min-h-screen py-16 px-32 bg-bg-dark relative overflow-hidden">
       
       {/* ambient gradients */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/5 to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-primary/5 to-transparent pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2  gap-8 md:gap-12 items-center relative z-10">
         
         {/* Left col — text */}
-        <div style={{margin:"24px 0 48px"}} className="order-2 lg:order-1 flex flex-col gap-6">
+        <div style={{margin:"24px 0 48px"}} className="order-1 lg:order-1 flex flex-col gap-6">
           
           {/* section label */}
           <div  className="flex items-center gap-2">
@@ -22,7 +22,7 @@ function AboutTeaser() {
           </div>
 
           {/* headline */}
-          <h2 className="text-3xl md:text-4xl font-black leading-tight uppercase">
+          <h2 className="text-2xl md:text-4xl font-black leading-tight uppercase">
             Problem Solver. <br />
             <span className="text-gray-500">System Architect.</span>
           </h2>
@@ -50,7 +50,7 @@ function AboutTeaser() {
         </div>
 
         {/* Right col — terminal */}
-        <div className="order-1 lg:order-2">
+        <div className="order-2 lg:order-2">
           <TerminalCard />
         </div>
 
