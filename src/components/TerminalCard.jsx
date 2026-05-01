@@ -53,7 +53,7 @@ function TerminalCard() {
       </div>
 
       {/* More About ME -> main about page */}
-      <div style={{margin:"24px 0"}} className="hidden lg:inline-flex items-center justify-start neon-sm rounded-full">
+      <div style={{margin:"24px 0"}} className="hidden lg:inline-flex items-center justify-start ">
         {Info.map(btn =>
           <Button key={btn.text} text={btn.text} variant={btn.variant} icon={btn.icon}/>
         )}
