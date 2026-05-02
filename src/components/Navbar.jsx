@@ -17,7 +17,7 @@ function Navbar() {
                 <div className="flex items-center gap-8">
 
                     {/* logo */}
-                    <div className="flex items-center gap-2 pr-6 border-r border-white/10">
+                    <div className="flex items-center gap-2 px-3 border-r border-white/10">
 
                         {/* replace svg with real logo later */}
                         <div className="w-6 h-6 bg-linear-to-br from-fuchsia-500 to-purple-600 rounded flex items-center justify-center">
@@ -36,8 +36,8 @@ function Navbar() {
 
                            return (
                             <li key={link.name}>
-                                <button className="relative p-2.5 rounded-full transition-all duration-300 text-white/60 hover:text-white hover:bg-white/10" title={link.label}>
-                                    <Icon className="w-5 h-5" size={8}/>
+                                <button className="relative p-3 mr-2 rounded-full transition-all duration-300 text-white/60 hover:text-white hover:bg-white/10" title={link.label}>
+                                    <Icon className="w-4 h-4"/>
                                 </button>
                             </li>)
                         })}
