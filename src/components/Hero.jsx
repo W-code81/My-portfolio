@@ -1,7 +1,7 @@
 import React from "react";
 // import { motion } from "motion/react";
 import Button from "./Btn";
-import { Download, MoveDown , ChevronsDown } from "lucide-react";
+import {ChevronsDown } from "lucide-react";
 import  btnInfo  from "../data/btnInfo";
 
 
