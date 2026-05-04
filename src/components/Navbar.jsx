@@ -1,16 +1,8 @@
-import { VscGithubAlt } from "react-icons/vsc";
-import { FiFileText, FiUser, FiHome } from "react-icons/fi";
 import Button from "./Btn";
+import links from "../data/navLinks";
 
 
-function Navbar() {
-    const links = [
-        { name: "home", label:"Home",icon: FiHome },
-        { name: 'about', label: 'About', icon: FiUser },
-        { name: 'resume', label: 'Resume', icon: FiFileText },
-        { name: 'github', label: 'GitHub', icon: VscGithubAlt },
-    ]
-
+function Navbar() {    
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-auto">
             <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-full px-3 py-2.5 shadow-2xl">
