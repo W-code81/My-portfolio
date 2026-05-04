@@ -2,23 +2,8 @@ import React from "react";
 // import { motion } from "motion/react";
 import Button from "./Btn";
 import { Download, MoveDown , ChevronsDown } from "lucide-react";
+import  btnInfo  from "../data/btnInfo";
 
-function CreateBtn({ text, onClick, icon: Icon , variant }) {
-  return (
-    <Button
-      key={text}
-      text={text}
-      onClick={onClick}
-      icon={Icon}
-      variant={variant}
-    />
-  );
-}
-
-const btnInfo = [
-  { text: "Contact Me", icon: MoveDown, variant:"primary", onClick: () => alert("Contact me clicked!") },
-  { text: "Download CV", icon: Download, variant:"secondary", onClick: () => alert("Download resume clicked!") },
-];
 
 function Hero() {
   return (
@@ -61,7 +46,16 @@ function Hero() {
         {/* Call-to-action buttons */}
         <div className="flex flex-col items-center justify-center sm:flex-row gap-4 mt-4 whitespace-nowrap">
           
-          {btnInfo.map(CreateBtn)}
+          {btnInfo.map(({ text, onClick, icon: Icon, variant }) =>{
+           return( 
+            <Button
+              key={text}
+              text={text}
+              onClick={onClick}
+              icon={Icon}
+              variant={variant}
+            />)
+          })}
         </div>
         
 
