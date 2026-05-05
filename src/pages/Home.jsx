@@ -1,8 +1,8 @@
-import Hero from "./Hero";
-import AboutTeaser from "./AboutTeaser";
-import SocialLinks from "./SocialLinks";
-import Navbar from "./Navbar";
-import WorkTeaser from "./WorkTeaser";
+import Hero from "../sections/Hero";
+import AboutTeaser from "../sections/AboutTeaser";
+import SocialLinks from "../components/SocialLinks";
+import Navbar from "../components/Navbar";
+import WorkTeaser from "../sections/WorkTeaser";
 
 function Home(){
     return(
