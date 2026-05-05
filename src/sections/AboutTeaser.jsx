@@ -1,4 +1,4 @@
-import TerminalCard from './TerminalCard';
+import TerminalCard from '../components/TerminalCard';
 
 function AboutTeaser() {
   return (

@@ -1,4 +1,4 @@
-import Button from "./Btn";
+import Button from "../components/Btn";
 import links from "../data/navLinks";
 
 

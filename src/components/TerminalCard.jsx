@@ -1,4 +1,4 @@
-import Button from "./Btn";
+import Button from "../components/Btn";
 import { User } from "lucide-react";
 
 const Info = [

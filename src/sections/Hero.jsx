@@ -1,6 +1,6 @@
 import React from "react";
 // import { motion } from "motion/react";
-import Button from "./Btn";
+import Button from "../components/Btn";
 import {ChevronsDown } from "lucide-react";
 import  btnInfo  from "../data/btnInfo";
 
