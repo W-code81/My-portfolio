@@ -1,17 +1,17 @@
 import Hero from "../sections/Hero";
 import AboutTeaser from "../sections/AboutTeaser";
-import SocialLinks from "../components/SocialLinks";
 import Navbar from "../components/Navbar";
 import WorkTeaser from "../sections/WorkTeaser";
+import Contacts from "../sections/Contacts";
 
 function Home(){
     return(
         <div>
             <Navbar />
             <Hero />  
-            <WorkTeaser />
             <AboutTeaser />
-            <SocialLinks />
+            <WorkTeaser />
+            <Contacts />
         </div>
     )
 }
