@@ -3,11 +3,11 @@ function ProjectCard({ title, description, image, tags, liveUrl, sourceUrl, link
         <div className="glass-card rounded-3xl overflow-hidden group hover:border-primary/30 hover:neon-md transition-all duration-300">
 
             {/* image */}
-            <div className="h-56 w-full overflow-hidden relative">
+            <div className="h-48 w-full overflow-hidden relative">
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 opacity-90 sm:opacity-80 sm:group-hover:opacity-100  transition-transform duration-500"
                     loading="lazy"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-card-dark via-transparent to-transparent" />
