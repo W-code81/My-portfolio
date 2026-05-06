@@ -3,10 +3,15 @@ import projects from '../data/projects';
 
 function WorkTeaser() {
     return (
-        <section className="py-24 px-6 bg-bg-dark relative" id="work">
+        <section className="py-24 px-6 bg-bg-dark relative overflow-hidden" id="work">
+
+            {/* ambient top-left */}
+            <div className="absolute top-0 left-0 w-1/2 h-full bg-linear-to-r from-primary/5 to-transparent pointer-events-none" />
+            {/* ambient bottom-right */}
+            <div className="absolute bottom-0 right-0 w-full h-1/2 bg-linear-to-t from-primary/5 to-transparent pointer-events-none" />
 
             {/* header */}
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 z-10 relative">
                 <div>
                     <h2 className="text-2xl md:text-4xl font-black text-white uppercase mb-3">
                         Selected Works
