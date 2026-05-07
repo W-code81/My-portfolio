@@ -16,7 +16,7 @@ function Hero() {
 
         {/* Available for hire badge */}
 
-        <div  className="inline-flex items-center gap-3 px-1 py-1 rounded-full border border-primary/50 bg-primary/20 text-primary text-xs font-mono tracking-widest">
+        <div  className="sm:hidden inline-flex items-center gap-3 px-1 py-1 rounded-full border border-primary/50 bg-primary/20 text-primary text-xs font-mono tracking-widest">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute left-1.5 inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span className="relative left-1.5 inline-flex h-2 w-2 rounded-full bg-primary"></span>
@@ -44,7 +44,7 @@ function Hero() {
         </div>
 
         {/* Call-to-action buttons */}
-        <div className="flex flex-col items-center justify-center sm:flex-row gap-4 mt-4 whitespace-nowrap">
+        <div className="flex flex-col items-center justify-center sm:flex-row gap-4 mt-4 whitespace-nowrap pb-1">
           
           {btnInfo.map(({ text, onClick, icon: Icon, variant }) =>{
            return( 
