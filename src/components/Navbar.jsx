@@ -1,8 +1,11 @@
 import Button from "../components/Btn";
 import links from "../data/navLinks";
+import { useState } from "react";
 
 
-function Navbar() {    
+function Navbar() {
+    const [active, setActive] = useState("");
+
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] md:w-auto">
             <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-full px-3 py-2.5 shadow-2xl">
@@ -23,15 +26,21 @@ function Navbar() {
 
                     {/* links */}
                     <ul className="flex items-center gap-1">
-                        {links.map((link) =>{
+                        {links.map((link) => {
                             const Icon = link.icon;
 
-                           return (
-                            <li key={link.name}>
-                                <button className="relative p-3 rounded-full transition-all duration-300 text-white/60 hover:text-white hover:bg-white/10" title={link.label}>
-                                    <Icon className="w-5 h-5 md:w-4 md:h-4"/>
-                                </button>
-                            </li>)
+                            return (
+                                <li key={link.name}>
+                                    <button className={`relative p-3 rounded-full transition-all duration-300 
+                                            ${active === link.name
+                                            ? "absolute inset-0 rounded-full bg-linear-to-br from-fuchsia-500 to-purple-600"
+                                            : "text-white/60 hover:text-white hover:bg-white/10"}`}
+
+                                        title={link.label}
+                                        onClick={() => setActive(link.name)}>
+                                        <Icon className="w-5 h-5 md:w-4 md:h-4" />
+                                    </button>
+                                </li>)
                         })}
                     </ul>
 
