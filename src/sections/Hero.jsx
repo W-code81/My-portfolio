@@ -25,7 +25,7 @@ function Hero() {
         </div>
 
         {/* Hero heading */}
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white uppercase leading-tight">
+        <h1 className="text-4xl min-[375px]:text-5xl md:text-7xl font-black tracking-tighter text-white uppercase leading-tight">
           BUILDING THE <br />
           WEB OF <br />
           <span className="text-primary text-glow">TOMORROW</span>
