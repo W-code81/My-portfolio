@@ -2,16 +2,16 @@ import TerminalCard from '../components/TerminalCard';
 
 function AboutTeaser() {
   return (
-    <section className="flex flex-row items-center justify-center min-h-screen bg-bg-dark relative overflow-hidden">
+    <section className="flex flex-row items-center justify-center min-h-screen md:min-h-full md:py-24 lg:py-0 lg:min-h-screen bg-bg-dark relative overflow-hidden">
       
       {/* ambient gradients */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/5 to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-primary/5 to-transparent pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto my-8 md:my-0 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-12 items-center relative z-10">
+      <div className="max-w-5xl mx-auto my-8 md:my-0 grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-12 items-center relative z-10">
         
         {/* Left col — text */}
-        <div className="order-1 lg:order-1 flex flex-col gap-6 mx-4 md:mx-0">
+        <div className="order-1 lg:order-1 flex flex-col gap-6 lg:gap-6 mx-4 md:mx-8 lg:mx-0">
           
           {/* section label */}
           <div  className="flex items-center gap-2 mt-4 md:mt-0">
