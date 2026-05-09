@@ -9,7 +9,7 @@ function TerminalCard() {
   return (
     <div>
 
-      <div className="glass-card rounded-4xl overflow-hidden border border-primary/20 font-mono text-sm neon-sm mx-4 md:mx-0">
+      <div className="glass-card rounded-4xl overflow-hidden border border-primary/20 font-mono text-sm neon-sm mx-4 md:mx-8 lg:mx-0">
 
         {/* Terminal header */}
         <div className="bg-card-darker px-4 py-2 md:px-5 md:py-3 flex items-center gap-2 border-b border-white/10">
