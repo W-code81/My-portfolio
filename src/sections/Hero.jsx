@@ -7,7 +7,7 @@ import  btnInfo  from "../data/btnInfo";
 
 function Hero() {
   return (
-    <div className="bg-bg-dark min-h-screen flex flex-col items-center justify-center px-6 relative overflow-hidden pt-20 md:pt-25">
+    <div className="bg-bg-dark min-h-full flex flex-col items-center justify-center px-6 relative overflow-hidden pt-32 py-24 md:pt-25">
 
       {/* glow blob */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
