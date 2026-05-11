@@ -1,8 +1,16 @@
 import { MoveDown, Download } from "lucide-react";
 
- const btnInfo = [
-  { text: "Contact Me", icon: MoveDown, variant:"primary", onClick: () => document.getElementById("contact").scrollIntoView({ behavior: "smooth" }) },
-  { text: "Download CV", icon: Download, variant:"secondary", onClick: () => window.open("/pdf/My_Resume.pdf" , "_blank")},
+const btnInfo = [
+  { text: "Contact Me", icon: MoveDown, variant: "primary", onClick: () => document.getElementById("contact").scrollIntoView({ behavior: "smooth" }) },
+  {
+    text: "Download CV", icon: Download, variant: "secondary",
+    onClick: () => {
+      const link = document.createElement("a");
+      link.href = "/pdf/My_Resume.pdf";
+      link.download = "My_Resume.pdf";
+      link.click();
+    }
+  },
 ];
 
 export default btnInfo;
