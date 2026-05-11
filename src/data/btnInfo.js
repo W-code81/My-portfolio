@@ -8,7 +8,9 @@ const btnInfo = [
       const link = document.createElement("a");
       link.href = "/pdf/My_Resume.pdf";
       link.download = "My_Resume.pdf";
+      document.body.appendChild(link);
       link.click();
+      document.body.removeChild(link);
     }
   },
 ];
