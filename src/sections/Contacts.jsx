@@ -31,7 +31,9 @@ function Contacts() {
                 </p>
 
                 {/* Button */}
-                <Button icon={VscMail} text="hello@wcode81" variant="primary" />
+                <a href="mailto:oluwadamilolaaderogba@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <Button icon={VscMail} text="contact me" variant="primary" />
+                </a>
 
                 {/* Divider */}
                 <div className="w-full border-t border-white/10" />
@@ -40,7 +42,7 @@ function Contacts() {
                 <SocialLinks />
 
                 {/* Copyright */}
-                <p className="text-gray-600 text-xs">© 2025 W-code81 · All rights reserved</p>
+                <p className="text-gray-600 text-xs">© {new Date().getFullYear()} W-code81 · All rights reserved</p>
 
             </section>
         </div>
