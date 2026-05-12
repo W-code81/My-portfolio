@@ -15,10 +15,10 @@ const socialLinks = [
     href: "https://x.com/wcode81",
     icon: FaXTwitter 
   },
-  {
-    href: "mailto:aderogbaoluwadamilola@gmail.com",
-    icon: VscMail
-  }
+  // {
+  //   href: "mailto:aderogbaoluwadamilola@gmail.com",
+  //   icon: VscMail
+  // }
 ];
 
 export default socialLinks;
