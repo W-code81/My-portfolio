@@ -2,6 +2,8 @@ import Avatar from "../components/Avatar";
 import about from "../data/about";
 import StackCard from "../components/StackCard";
 import { frontendStack, backendStack, otherStack } from "../data/stackIcons";
+import RoadmapCard from "../components/RoadmapCard";
+import roadmapData from "../data/roadmap";
 
 function AboutMain() {
     return (
@@ -100,6 +102,43 @@ function AboutMain() {
                     </div>
                 </div>
 
+            </section>
+
+            <section className="relative w-full max-w-6xl mx-auto py-32 px-6 overflow-hidden">
+
+                {/* glow */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
+
+                {/* heading */}
+                <div className="text-center mb-20 relative z-10">
+
+                    <p className="uppercase tracking-[0.3em] text-primary text-sm mb-4 font-mono">
+                        The Roadmap
+                    </p>
+
+                    <h2 className="text-2xl md:text-4xl font-black text-white uppercase">
+                        Where I'm Headed
+                    </h2>
+                </div>
+
+                {/* timeline */}
+                <div className="relative flex flex-col gap-16 z-10">
+
+                    {/* center line */}
+                    <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-0.5 h-full bg-primary/20" />
+
+                    {/* cards */}
+                    {roadmapData.map((item, index) => (
+                        <RoadmapCard
+                            key={index}
+                            phase={item.phase}
+                            title={item.title}
+                            description={item.description}
+                            status={item.status}
+                            side={item.side}
+                        />
+                    ))}
+                </div>
             </section>
         </div>
     )
