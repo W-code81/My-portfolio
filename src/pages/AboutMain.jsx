@@ -6,9 +6,10 @@ import { frontendStack, backendStack, otherStack } from "../data/stackIcons";
 function AboutMain() {
     return (
         <div className="bg-bg-dark min-h-screen flex flex-col items-center justify-center px-6 py-24 relative overflow-hidden">
-
-            {/* Ambient Center */}
-            {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/20 rounded-full blur-[120px] pointer-events-none" /> */}
+            {/* Full page radial — sits in the center of the whole page */}
+            <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_0%,rgba(192,38,211,0.12),transparent)] pointer-events-none" />
+            {/* Subtle bottom fade */}
+            <div className="absolute bottom-0 left-0 right-0 h-96 bg-linear-to-t from-accent/5 to-transparent pointer-events-none" />
 
             <section className="relative z-10 w-full max-w-6xl mx-auto gap-16">
 
@@ -48,13 +49,13 @@ function AboutMain() {
                     ))}
                 </div>
 
-                <h1 className="text-white text-center font-bold text-4xl my-15">MY TECHSTACK</h1>
+                <h2 className="text-white text-center font-bold text-2xl md:text-4xl my-15">MY TECHSTACK</h2>
 
                 {/* techstack*/}
                 <div className="flex flex-col backdrop-blur-md bg-white/3 border border-white/10 rounded-3xl gap-6">
 
                     {/* frontend */}
-                    <h2 className="text-2xl font-semibold text-white text-center pt-6">Frontend</h2>
+                    <h3 className="text-2xl font-semibold text-white text-center pt-6">Frontend</h3>
 
                     {/* icons */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 p-6">
@@ -70,7 +71,7 @@ function AboutMain() {
                         ))}
                     </div>
 
-                    <h2 className="text-2xl font-semibold text-white text-center">Backend</h2>
+                    <h3 className="text-2xl font-semibold text-white text-center">Backend</h3>
 
                     {/* backend */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 p-6 ">
@@ -84,7 +85,7 @@ function AboutMain() {
                         ))}
                     </div>
 
-                    <h2 className="text-2xl font-semibold text-white text-center">Other Tools</h2>
+                    <h3 className="text-2xl font-semibold text-white text-center">Other Tools</h3>
 
                     {/* other tools */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 p-6">
