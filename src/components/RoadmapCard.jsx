@@ -2,7 +2,7 @@ function RoadmapCard(props) {
 
     const position =
         props.side === "left"
-            ? "md:mr-auto md:text-right md:items-end"
+            ? "md:mr-auto md:text-left md:items-end"
             : "md:ml-auto md:text-left md:items-start";
 
     return (
