@@ -3,7 +3,7 @@ import { Download, Briefcase ,GraduationCap } from "lucide-react";
 
 const experience = [
     {
-        title: "Frontend Development Journey",
+        title: "Frontend Development",
         company: "Self-Learning & Personal Projects",
         period: "2023 - Present",
         description:
@@ -36,12 +36,21 @@ const education = [
 
 function Resume() {
     return (
-        <div className="bg-bg-dark min-h-screen flex flex-col mt-24 ">
-            <section className="flex flex-col items-center gap-4">
+        <div className="bg-bg-dark min-h-screen flex flex-col my-24 ">
+         {/* Top radial — behind title and download button */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-125 h-75 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
+
+            {/* Left glow — behind experience cards */}
+            <div className="absolute top-1/3 left-0 w-62.5 h-100 bg-accent/8 rounded-full blur-[100px] pointer-events-none" />
+
+            {/* Right glow — behind education cards */}
+            <div className="absolute bottom-1/3 right-0 w-62.5 h-75  bg-primary/8 rounded-full blur-[100px] pointer-events-none" />
+
+            <section className="flex flex-col items-center gap-4 relative z-10">
 
                 <div className="max-w-4xl mx-auto">
-                    <div className="flex flex-col text-center items-center gap-6 ">
-                        <h1 className="uppercase text-white font-bold text-2xl md:text-5xl my-2">
+                    <div className="flex flex-col text-center items-center gap-6 my-15">
+                        <h1 className="uppercase text-white font-bold text-4xl md:text-5xl my-2">
                             Resume
                         </h1>
 
@@ -68,7 +77,7 @@ function Resume() {
                         <h3 className="text-3xl font-bold text-white">Experience</h3>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 px-6">
+                    <div className="grid grid-cols-1 gap-6 px-6 mb-15">
                         {experience.map((job, index) => (
                             <div key={index} className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-300">
                                 <div className="flex flex-col items-start">
@@ -108,11 +117,6 @@ function Resume() {
                         ))}
                     </div>
                 </div>
-
-
-
-
-
 
             </section>
         </div>
