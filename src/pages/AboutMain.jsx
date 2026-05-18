@@ -111,7 +111,7 @@ function AboutMain() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
                 {/* heading */}
-                <div className="text-center mb-20 relative border z-10 px-6">
+                <div className="text-center mb-20 relative z-10 px-6">
 
                     <p className="uppercase tracking-[0.3em] text-primary text-sm mb-4 font-mono">
                         The Roadmap
