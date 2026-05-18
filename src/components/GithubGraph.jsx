@@ -25,6 +25,7 @@ function GithubGraph() {
                             ],
                         }}
                         renderBlock={(block, activity) => //render a custom tooltip for each block in the calendar, showing the date and number of contributions for that day
+                           //react.cloneElement is used to clone the original block element and add custom data attributes for the tooltip, which will be used to display the tooltip content when the user hovers over a block
                             React.cloneElement(block, { //block — the actual <rect> SVG element the library was going to render
                                 'data-tooltip-id': 'github-tooltip',
                                 "data-tooltip-content": `${activity.count} contribution${activity.count == 1 ? "" : "s"} on ${activity.date}`, //activity — the data for that specific day: { date: "2024-08-15", count: 3, level: 2 }
