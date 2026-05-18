@@ -28,7 +28,7 @@ function Hero() {
         <h1 className="text-4xl min-[375px]:text-5xl md:text-7xl font-black tracking-tighter text-white uppercase leading-tight">
           BUILDING THE <br />
           WEB OF <br />
-          <span className="text-primary text-glow">TOMORROW</span>
+          <span className="bg-linear-to-r from-fuchsia-500 to-purple-500 bg-clip-text text-transparent">TOMORROW</span>
         </h1>
 
         {/* Hero subheading */}
