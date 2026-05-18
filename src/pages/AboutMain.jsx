@@ -27,7 +27,7 @@ function AboutMain() {
                 </div>
 
                 {/*intro text*/}
-                <p className=" text-gray-400 text-sm md:text-lg max-w-xl leading-relaxed mx-auto mb-8 pb-8 px-6">My journey into tech started with curiosity and quickly became a passion for building meaningful digital experiences. I enjoy creating products that combine thoughtful design, functionality, and real impact.</p>
+                <p className="text-gray-400 text-sm md:text-lg max-w-xl md:max-w-3xl leading-relaxed mx-auto mb-8 pb-8 px-6">My journey into tech started with curiosity and quickly became a passion for building meaningful digital experiences. I enjoy creating products that combine thoughtful design, functionality, and real impact.</p>
 
                 {/* glass cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
@@ -105,13 +105,13 @@ function AboutMain() {
 
             </section>
 
-            <section className="relative w-full max-w-6xl mx-auto pt-32 px-6 overflow-hidden">
+            <section className="relative w-full max-w-6xl mx-auto pt-32 overflow-hidden">
 
                 {/* glow */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
                 {/* heading */}
-                <div className="text-center mb-20 relative z-10">
+                <div className="text-center mb-20 relative border z-10 px-6">
 
                     <p className="uppercase tracking-[0.3em] text-primary text-sm mb-4 font-mono">
                         The Roadmap
@@ -123,7 +123,7 @@ function AboutMain() {
                 </div>
 
                 {/* timeline */}
-                <div className="relative flex flex-col gap-16 z-10">
+                <div className="relative flex flex-col gap-16 z-10 px-6">
 
                     {/* center line */}
                     <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-0.5 h-full bg-primary/20" />
