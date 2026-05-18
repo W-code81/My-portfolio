@@ -1,4 +1,6 @@
+import React from "react";
 import { GitHubCalendar } from "react-github-calendar";
+import { Tooltip } from "react-tooltip";
 
 function GithubGraph() {
     return (
@@ -22,7 +24,23 @@ function GithubGraph() {
                                 "#d946ef",  // highest — fuchsia-500
                             ],
                         }}
+                        renderBlock={(block, activity) => //render a custom tooltip for each block in the calendar, showing the date and number of contributions for that day
+                            React.cloneElement(block, { //block — the actual <rect> SVG element the library was going to render
+                                'data-tooltip-id': 'github-tooltip',
+                                "data-tooltip-content": `${activity.count} contribution${activity.count == 1 ? "" : "s"} on ${activity.date}`, //activity — the data for that specific day: { date: "2024-08-15", count: 3, level: 2 }
+                            })
+                        }
                     />
+                    <Tooltip
+                        id="github-tooltip"
+                        style={{
+                            backgroundColor: "#1a0b2e",
+                            border: "1px solid rgba(192,38,211,0.3)",
+                            color: "white",
+                            fontSize: "12px",
+                            borderRadius: "8px",
+                            padding: "6px 10px",
+                        }} />
                 </div>
 
             </section>
