@@ -38,8 +38,8 @@ function Resume() {
                     </div>
 
 
-                    <div className="flex items-start gap-3 my-8 px-6">
-                        <div className="md:w-10 md:h-10 w-12 h-12 bg-linear-to-br from-fuchsia-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                    <div className="flex items-center gap-3 my-8 px-6">
+                        <div className="md:w-10 md:h-10 w-12 h-12 bg-linear-to-r from-fuchsia-500 to-purple-500 rounded-2xl flex items-center justify-center">
                             <Briefcase className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-3xl font-bold text-white">Experience</h3>
@@ -62,8 +62,8 @@ function Resume() {
                         ))}
                     </div>
 
-                    <div className="flex items-start gap-3 my-8 px-6">
-                        <div className="md:w-10 md:h-10 w-12 h-12 bg-linear-to-br from-fuchsia-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                    <div className="flex items-center gap-3 my-8 px-6">
+                        <div className="md:w-10 md:h-10 w-12 h-12 bg-linear-to-r from-fuchsia-500 to-purple-500 rounded-2xl flex items-center justify-center">
                             <GraduationCap className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-3xl font-bold text-white">Education</h3>
