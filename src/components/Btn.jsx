@@ -3,7 +3,7 @@ function Button(props) {
   const base = "w-auto py-3 px-5 md:px-3 text-sm cursor-pointer rounded-full h-10 w-fit uppercase transition-all duration-300 tracking-wide flex items-center justify-center gap-3 whitespace-nowrap hover:scale-105";
 
   const styles = {
-    primary:"bg-primary hover:shadow-[0_0_25px_rgba(192,38,211,0.6)]",
+    primary:"bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white hover:shadow-[0_0_25px_rgba(217,70,239,0.5)]",
     secondary:"bg-white/5 backdrop-blur-md border border-white/20 text-white hover:bg-white/10 hover:border-primary/50"
   };
 
