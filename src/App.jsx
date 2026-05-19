@@ -13,7 +13,7 @@ function App() {
         <>
             <Navbar active={section} setActive={setSection} />
 
-            <main>
+            <main className="cursor-default">
                 {section==="home" && <Home /> }
                 {section==="about" && <AboutMain /> }
                 {section==="resume" && <Resume /> }
