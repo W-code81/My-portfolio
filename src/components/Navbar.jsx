@@ -32,7 +32,7 @@ function Navbar({ active, setActive }) {
 
                             return (
                                 <li key={link.name}>
-                                    <button className={`relative p-2.5 min-[375px]:p-3 rounded-full transition-all duration-300 
+                                    <button className={`relative p-2.5 min-[375px]:p-3 rounded-full transition-all duration-300 cursor-pointer 
                                             ${active === link.name
                                             ? "bg-linear-to-br from-fuchsia-500 to-purple-600 text-white"
                                             : "text-white/60 hover:text-white hover:bg-white/10"}`}
