@@ -7,7 +7,7 @@ import { useState } from "react";
 
 
 function App() {
-    const [section, setSection] = useState("github")
+    const [section, setSection] = useState("home")
     
     return (
         <>
