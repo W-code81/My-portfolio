@@ -1,10 +1,10 @@
 import Button from "../components/Btn";
 import links from "../data/navLinks";
-import { useState } from "react";
+// import { useState } from "react";
 
 
-function Navbar() {
-    const [active, setActive] = useState("home");
+function Navbar({ active, setActive }) {
+    // const [active, setActive] = useState("home");
 
     return (
         <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-max max-w-[95%]">
@@ -12,7 +12,8 @@ function Navbar() {
                 <div className="flex items-center gap-2 min-[375px]:gap-3">
 
                     {/* logo */}
-                    <div className="flex items-center gap-1.5 min-[375px]:gap-2 px-2 min-[375px]:px-3 border-r border-white/10">
+                    <div className="flex items-center gap-1.5 min-[375px]:gap-2 px-2 min-[375px]:px-3 border-r border-white/10 cursor-pointer"
+                        onClick={() => setActive("home")}>
 
                         {/* replace svg with real logo later */}
                         <div className="w-5 h-5 bg-linear-to-br from-fuchsia-500 to-purple-600 rounded flex items-center justify-center shrink-0">
