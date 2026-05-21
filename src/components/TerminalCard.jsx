@@ -2,10 +2,10 @@ import Button from "../components/Btn";
 import { User } from "lucide-react";
 
 const Info = [
-  { text: "More on Me", icon: User, variant: "secondary" }
+  { text: "More on Me", icon: User, variant: "secondary" , section: "about" }
 ]
 
-function TerminalCard() {
+function TerminalCard({setActive}) {
   return (
     <div>
 
@@ -57,7 +57,7 @@ function TerminalCard() {
       {/* More About ME -> main about page */}
       <div className="mt-6 hidden lg:inline-flex items-center justify-start neon-sm rounded-full">
         {Info.map(btn =>
-          <Button key={btn.text} text={btn.text} variant={btn.variant} icon={btn.icon} />
+          <Button key={btn.text} text={btn.text} variant={btn.variant} icon={btn.icon} onClick= {() =>setActive(btn.section)}/>, {/* pass setActive to the button so that it can change the section when clicked */}
         )}
       </div>
     </div>
@@ -65,3 +65,4 @@ function TerminalCard() {
 }
 
 export default TerminalCard;
+//if the btn is in the home page it should change to the section

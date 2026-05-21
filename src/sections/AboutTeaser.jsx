@@ -1,8 +1,8 @@
 import TerminalCard from '../components/TerminalCard';
 
-function AboutTeaser() {
+function AboutTeaser({setActive}) {
   return (
-    <section className="flex flex-row items-center justify-center min-h-screen md:min-h-full md:py-24 lg:py-0 lg:min-h-screen bg-bg-dark relative overflow-hidden">
+    <section className="flex flex-row items-center justify-center min-h-screen md:min-h-full md:py-24 bg-bg-dark relative overflow-hidden">
       
       {/* ambient gradients */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/5 to-transparent pointer-events-none" />
@@ -51,7 +51,7 @@ function AboutTeaser() {
 
         {/* Right col — terminal */}
         <div className="order-2 lg:order-2">
-          <TerminalCard />
+          <TerminalCard setActive={setActive} /> {/* pass setActive to TerminalCard so that the terminal buttons can change the section */}
         </div>
 
       </div>
