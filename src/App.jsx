@@ -3,12 +3,15 @@ import AboutMain from "./pages/AboutMain";
 import Resume from "./pages/Resume";
 import Github from "./pages/Github";
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function App() {
     const [section, setSection] = useState("home")
-    
+     useEffect(() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                },[section]) // scroll to top whenever section changes;
+
     return (
         <>
             <Navbar active={section} setActive={setSection} />
