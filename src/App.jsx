@@ -14,7 +14,7 @@ function App() {
             <Navbar active={section} setActive={setSection} />
 
             <main className="cursor-default">
-                {section==="home" && <Home /> }
+                {section==="home" && <Home  setActive={setSection} /> } {/* pass setActive to Home so that the terminal buttons can change the section */}
                 {section==="about" && <AboutMain /> }
                 {section==="resume" && <Resume /> }
                 {section==="github" && <Github />}
