@@ -3,11 +3,11 @@ import AboutTeaser from "../sections/AboutTeaser";
 import WorkTeaser from "../sections/WorkTeaser";
 import Contacts from "../sections/Contacts";
 
-function Home(){
+function Home({setActive}){
     return(
         <div>
             <Hero />  
-            <AboutTeaser />
+            <AboutTeaser setActive={setActive} /> {/* pass setActive to AboutTeaser so that the terminal buttons can change the section */}
             <WorkTeaser />
             <Contacts />
         </div>
