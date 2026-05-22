@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 function App() {
     const [section, setSection] = useState("home")
      useEffect(() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: "instant" });
                 },[section]) // scroll to top whenever section changes;
 
     return (
