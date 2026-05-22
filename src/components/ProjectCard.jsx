@@ -1,6 +1,14 @@
-function ProjectCard({ title, description, image, tags, liveUrl, sourceUrl, linkLabel }) {
+/* eslint-disable no-unused-vars */
+import { motion } from "motion/react";
+
+function ProjectCard({ id, title, description, image, tags, liveUrl, sourceUrl, linkLabel }) {
     return (
-        <div className="glass-card rounded-3xl overflow-hidden group hover:border-primary/30 hover:neon-md transition-all duration-300">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: id * 0.1 }}
+            viewport={{ once: true }}
+            className="glass-card rounded-3xl overflow-hidden group hover:border-primary/30 hover:neon-md transition-all duration-300">
 
             {/* image */}
             <div className="h-48 w-full overflow-hidden relative">
@@ -42,7 +50,7 @@ function ProjectCard({ title, description, image, tags, liveUrl, sourceUrl, link
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 

@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import { motion } from "motion/react";
 function RoadmapCard(props) {
 
     const position =
@@ -29,7 +31,13 @@ function RoadmapCard(props) {
             />
 
             {/* card */}
-            <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-300 shadow-[0_0_30px_rgba(192,38,211,0.08)]">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-300 shadow-[0_0_30px_rgba(192,38,211,0.08)]"
+            >
 
                 {/* label */}
                 <span className=" uppercase tracking-[0.2em] text-primary text-xs font-mono ">
@@ -52,7 +60,7 @@ function RoadmapCard(props) {
                         {props.status}
                     </span>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

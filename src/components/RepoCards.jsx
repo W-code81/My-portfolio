@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { ExternalLink, Star, GitFork } from "lucide-react";
+import { motion } from "motion/react";
 
 function Projects() {
 
@@ -46,14 +48,18 @@ function Projects() {
 
         fetchRepos(); //fetch the repos when the component mounts
 
-    }, []);
+    }, [repos]); //add repos as a dependency to the useEffect so that it runs again when the repos state changes
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
             {repos.map((repo) => (
-                <div
+                <motion.div
                     key={repo.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2, delay: repos.indexOf(repo) * 0.1 }}
+                    viewport={{ once: true }}
                     className="backdrop-blur-md bg-white/5 hover:bg-white/10 border border-white/5  rounded-3xl p-6 group hover:-translate-y-1 duration-300"
                 >
                     <div className="flex justify-between items-start mb-4">
@@ -90,19 +96,19 @@ function Projects() {
                         </div>
 
                         <div className="flex items-center justify-between gap-2">
-                           <div
-                            className={`w-3 h-3 rounded-full ${languageColors[repo.language] || "bg-gray-500"}`} //set the color of the language dot based on the language of the repo, default to gray if the language is not in the languageColors object
-                        ></div>
-                        <span >
-                            {repo.language}
-                        </span> 
+                            <div
+                                className={`w-3 h-3 rounded-full ${languageColors[repo.language] || "bg-gray-500"}`} //set the color of the language dot based on the language of the repo, default to gray if the language is not in the languageColors object
+                            ></div>
+                            <span >
+                                {repo.language}
+                            </span>
                         </div>
-                        
+
 
 
                     </div>
 
-                </div>
+                </motion.div>
             ))}
 
         </div>

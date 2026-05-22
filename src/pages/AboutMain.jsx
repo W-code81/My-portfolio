@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import Avatar from "../components/Avatar";
 import about from "../data/about";
 import StackCard from "../components/StackCard";
@@ -5,6 +6,7 @@ import { frontendStack, backendStack, otherStack } from "../data/stackIcons";
 import RoadmapCard from "../components/RoadmapCard";
 import roadmapData from "../data/roadmap";
 import Contacts from "../sections/Contacts";
+import { motion } from "motion/react"
 
 function AboutMain() {
     return (
@@ -17,23 +19,40 @@ function AboutMain() {
             <section className="relative z-10 w-full max-w-6xl mx-auto gap-16">
 
                 {/* Intro */}
-                <div className="overflow-hidden relative py-4 flex items-center justify-center pb-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="overflow-hidden relative py-4 flex items-center justify-center pb-8">
 
                     {/* Avatar */}
                     <Avatar
                         src="/images/me.jpg"
                         alt="Profile_img"
                     />
-                </div>
+                </motion.div>
 
                 {/*intro text*/}
-                <p className="text-gray-400 text-sm md:text-lg max-w-xl md:max-w-3xl leading-relaxed mx-auto mb-8 pb-8 px-6">My journey into tech started with curiosity and quickly became a passion for building meaningful digital experiences. I enjoy creating products that combine thoughtful design, functionality, and real impact.</p>
+                <motion.p
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="text-gray-400 text-sm md:text-lg max-w-xl md:max-w-3xl leading-relaxed mx-auto mb-8 pb-8 px-6"
+                >
+                    My journey into tech started with curiosity and quickly became a passion for building meaningful digital experiences. I enjoy creating products that combine thoughtful design, functionality, and real impact.
+                </motion.p>
 
                 {/* glass cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
 
                     {about.map((item, index) => (
-                        <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                        >
 
                             <div key={index} className="flex flex-col items-start gap-4 mb-6">
 
@@ -48,57 +67,108 @@ function AboutMain() {
                                     <p className="text-gray-400">{item.description}</p>
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
 
-                <h2 className="text-white text-center font-bold text-2xl md:text-4xl mt-20 mb-15">MY TECHSTACK</h2>
+                <motion.h2
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="text-white text-center font-bold text-2xl md:text-4xl mt-20 mb-15"
+                >
+                    MY TECHSTACK
+                </motion.h2>
 
                 {/* techstack*/}
                 <div className="flex flex-col backdrop-blur-md bg-white/3 border border-white/10 rounded-3xl gap-6">
 
                     {/* frontend */}
-                    <h3 className="text-2xl font-semibold text-white text-center pt-6">Frontend</h3>
+                    <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="text-2xl font-semibold text-white text-center pt-6"
+                    >
+                        Frontend
+                    </motion.h3>
 
                     {/* icons */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 p-6">
                         {frontendStack.map((item, index) => (
-
-                            <StackCard
-                                key={index}
-                                src={item.src}
-                                name={item.name}
-                                class={item.class}
-                            />
-
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <StackCard
+                                    key={index}
+                                    src={item.src}
+                                    name={item.name}
+                                    class={item.class}
+                                />
+                            </motion.div>
                         ))}
                     </div>
 
-                    <h3 className="text-2xl font-semibold text-white text-center">Backend</h3>
+                    <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="text-2xl font-semibold text-white text-center"
+                    >
+                        Backend
+                    </motion.h3>
 
                     {/* backend */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 p-6 ">
                         {backendStack.map((item, index) => (
-                            <StackCard
-                                key={index}
-                                src={item.src}
-                                name={item.name}
-                                class={item.class}
-                            />
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <StackCard
+                                    key={index}
+                                    src={item.src}
+                                    name={item.name}
+                                    class={item.class}
+                                />
+                            </motion.div>
                         ))}
                     </div>
 
-                    <h3 className="text-2xl font-semibold text-white text-center">Other Tools</h3>
+                    <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="text-2xl font-semibold text-white text-center"
+                    >
+                        Other Tools
+                    </motion.h3>
 
                     {/* other tools */}
                     <div className="grid grid-cols-2 md:grid-cols-5 gap-6 p-6">
                         {otherStack.map((item, index) => (
-                            <StackCard
-                                key={index}
-                                src={item.src}
-                                name={item.name}
-                                class={item.class}
-                            />
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                                viewport={{ once: true }}
+                            >
+                                <StackCard
+                                    key={index}
+                                    src={item.src}
+                                    name={item.name}
+                                    class={item.class}
+                                />
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -113,13 +183,25 @@ function AboutMain() {
                 {/* heading */}
                 <div className="text-center mb-20 relative z-10 px-6">
 
-                    <p className="uppercase tracking-[0.3em] text-primary text-sm mb-4 font-mono">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="uppercase tracking-[0.3em] text-primary text-sm mb-4 font-mono"
+                    >
                         The Roadmap
-                    </p>
+                    </motion.p>
 
-                    <h2 className="text-2xl md:text-4xl font-black text-white uppercase">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                        className="text-2xl md:text-4xl font-black text-white uppercase"
+                    >
                         Where I'm Headed
-                    </h2>
+                    </motion.h2>
                 </div>
 
                 {/* timeline */}
@@ -145,7 +227,7 @@ function AboutMain() {
                 <div className="w-full max-w-6xl mx-auto px-0 pt-20">
                     <Contacts />
                 </div>
-            </section>    
+            </section>
         </div>
     )
 }

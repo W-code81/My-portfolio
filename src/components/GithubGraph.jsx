@@ -1,10 +1,17 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { GitHubCalendar } from "react-github-calendar";
 import { Tooltip } from "react-tooltip";
+import { motion } from "motion/react";
 
 function GithubGraph() {
     return (
-        <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 shadow-[0_0_40px_rgba(192,38,211,0.08)]">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 shadow-[0_0_40px_rgba(192,38,211,0.08)]">
             <section className="max-w-4xl mx-auto gap-4 relative z-10">
                 <h3 className="text-xl md:text-2xl font-semibold text-white mb-6">GitHub Contributions</h3>
 
@@ -25,7 +32,7 @@ function GithubGraph() {
                             ],
                         }}
                         renderBlock={(block, activity) => //render a custom tooltip for each block in the calendar, showing the date and number of contributions for that day
-                           //react.cloneElement is used to clone the original block element and add custom data attributes for the tooltip, which will be used to display the tooltip content when the user hovers over a block
+                            //react.cloneElement is used to clone the original block element and add custom data attributes for the tooltip, which will be used to display the tooltip content when the user hovers over a block
                             React.cloneElement(block, { //block — the actual <rect> SVG element the library was going to render
                                 'data-tooltip-id': 'github-tooltip',
                                 "data-tooltip-content": `${activity.count} contribution${activity.count == 1 ? "" : "s"} on ${activity.date}`, //activity — the data for that specific day: { date: "2024-08-15", count: 3, level: 2 }
@@ -45,7 +52,7 @@ function GithubGraph() {
                 </div>
 
             </section>
-        </div>
+        </motion.div>
     );
 }
 

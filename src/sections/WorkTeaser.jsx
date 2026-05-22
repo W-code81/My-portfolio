@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import ProjectCard from '../components/ProjectCard';
 import projects from '../data/projects';
+import { motion } from "motion/react"
 
 function WorkTeaser() {
     return (
@@ -12,15 +14,26 @@ function WorkTeaser() {
 
             {/* header */}
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12 z-10 relative">
-                <div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                >
                     <h2 className="text-2xl md:text-4xl font-black text-white uppercase mb-3">
                         Selected Works
                     </h2>
                     <p className="text-gray-400 text-sm md:text-lg">A showcase of modern web applications and experiments.</p>
-                </div>
-                <a href="https://github.com/W-code81" target='_blank' className="text-primary font-bold hover:text-purple-300 hover:underline transition-colors flex items-center gap-1">
+                </motion.div>
+                <motion.a
+                    href="https://github.com/W-code81" target='_blank' className="text-primary font-bold hover:text-purple-300 hover:underline transition-colors flex items-center gap-1"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
+                    viewport={{ once: true }}
+                >
                     View GitHub  ↗
-                </a>
+                </motion.a>
             </div>
 
             {/* grid */}
