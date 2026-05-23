@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import Button from "../components/Btn";
 import links from "../data/navLinks";
+import { motion } from "motion/react";
 // import { useState } from "react";
 
 
@@ -31,11 +33,17 @@ function Navbar({ active, setActive }) {
                             const Icon = link.icon;
 
                             return (
-                                <li key={link.name}>
-                                    <button className={`relative p-2.5 min-[375px]:p-3 rounded-full transition-all duration-300 cursor-pointer 
-                                            ${active === link.name
-                                            ? "bg-linear-to-br from-fuchsia-500 to-purple-600 text-white"
-                                            : "text-white/60 hover:text-white hover:bg-white/10"}`}
+                                <li className="relative" key={link.name}>
+                                    {/* if active, show bubble behind icon*/}
+                                    {active === link.name && (
+                                        <motion.div
+                                            layoutId="bubble"
+                                            className="absolute inset-0 bg-linear-to-br from-fuchsia-500 to-purple-600 rounded-full"
+                                            transition={{ type: "spring", stiffness: 400, damping: 18 }} //stiffness — higher = snappier, lower = slower; damping — higher = less bouncy, lower = more bouncy
+                                        />
+                                    )}
+                                    <button className={`relative p-2.5 min-[375px]:p-3 rounded-full transition-all duration-300 cursor-pointer
+                                        ${active=== link.name ? 'text-white' : 'text-white/60 hover:bg-white/10'} hover:text-white`}
 
                                         title={link.label}
                                         onClick={() => setActive(link.name)}>
