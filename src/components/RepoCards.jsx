@@ -10,7 +10,7 @@ function Projects() {
     const featuredRepos = [ // List of featured repositories to display
         "nodejs-api-starter",
         "TruckRiser",
-        "My-portfolio",
+        "paystack-integration-be",
         "Bible-Verse-App"
 
     ];
