@@ -48,7 +48,7 @@ function Projects() {
 
         fetchRepos(); //fetch the repos when the component mounts
 
-    }, [repos]); //add repos as a dependency to the useEffect so that it runs again when the repos state changes
+    },); //add repos as a dependency to the useEffect so that it runs again when the repos state changes
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
