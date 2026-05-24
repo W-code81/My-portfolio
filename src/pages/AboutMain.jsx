@@ -51,10 +51,10 @@ function AboutMain() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
+                            className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-6 hover:bg-white/10 transition-all duration-300 hover:-translate-y-1"
                         >
 
-                            <div key={index} className="flex flex-col items-start gap-4 mb-6">
+                            <div key={index} className="flex flex-col items-start gap-4">
 
                                 {/* icons */}
                                 <div className="w-14 h-14 bg-linear-to-br from-fuchsia-500 to-purple-600 rounded-2xl flex items-center justify-center mb-3">
