@@ -43,7 +43,7 @@ function AboutMain() {
                 </motion.p>
 
                 {/* glass cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
 
                     {about.map((item, index) => (
                         <motion.div
@@ -181,7 +181,7 @@ function AboutMain() {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-primary/10 blur-[140px] rounded-full pointer-events-none" />
 
                 {/* heading */}
-                <div className="text-center mb-20 relative z-10 px-6">
+                <div className="text-center mb-10 relative z-10 px-6">
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -205,7 +205,7 @@ function AboutMain() {
                 </div>
 
                 {/* timeline */}
-                <div className="relative flex flex-col gap-16 z-10 px-6">
+                <div className="relative flex flex-col gap-16 z-10 p-6">
 
                     {/* center line */}
                     <div className="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-0.5 h-full bg-primary/20" />
