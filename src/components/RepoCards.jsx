@@ -8,7 +8,7 @@ function Projects() {
     const [repos, setRepos] = useState([]);
 
     const featuredRepos = [ // List of featured repositories to display
-        "nodejs-api-starter",
+        "express-passport-starter",
         "TruckRiser",
         "paystack-integration-be",
         "Bible-Verse-App"
