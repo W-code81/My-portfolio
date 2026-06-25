@@ -8,7 +8,7 @@ function Home({setActive}){
         <div>
             <Hero />  
             <AboutTeaser setActive={setActive} /> {/* pass setActive to AboutTeaser so that the terminal buttons can change the section */}
-            <WorkTeaser />
+            <WorkTeaser setActive={setActive}/>
             <Contacts />
         </div>
     )
