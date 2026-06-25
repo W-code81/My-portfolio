@@ -163,7 +163,7 @@ Custom utility classes defined in `index.css`:
 
 **Aderogba Oluwadamilola John**
 Nigerian Developer & UI/UX Designer
-[GitHub](https://github.com/W-code81) · [LinkedIn](#) · [Twitter/X](#)
+[GitHub](https://github.com/W-code81) · [LinkedIn](https://www.linkedin.com/in/aderogba-oluwadamilola-64066a36a) · [Twitter/X](https://x.com/wcode81)
 
 ---
 
