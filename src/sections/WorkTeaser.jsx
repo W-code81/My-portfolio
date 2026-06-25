@@ -2,8 +2,9 @@
 import ProjectCard from '../components/ProjectCard';
 import projects from '../data/projects';
 import { motion } from "motion/react"
+import Button from '../components/Btn.jsx'
 
-function WorkTeaser() {
+function WorkTeaser({setActive}) {
     return (
         <section className="py-24 px-6 bg-bg-dark relative overflow-hidden" id="work">
 
@@ -42,6 +43,15 @@ function WorkTeaser() {
                     <ProjectCard key={project.id} {...project} />
                 ))}
             </div>
+
+            <div className='flex items-center justify-center mt-8'>
+               <Button
+                text="View All Projects"
+                variant="primary"
+                onClick = {() => setActive("projects")}
+            />  
+            </div>
+           
 
         </section>
     )
