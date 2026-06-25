@@ -9,6 +9,7 @@ const Home = lazy(() => import("./pages/Home"));
 const AboutMain = lazy(() => import("./pages/AboutMain"));
 const Resume = lazy(() => import("./pages/Resume"));
 const Github = lazy(() => import("./pages/Github"));
+const Projects = lazy(() => import("./pages/Projects"));
 
 function App() {
     const [section, setSection] = useState("home");
@@ -44,6 +45,7 @@ function App() {
                             {section === "about" && <AboutMain />}
                             {section === "resume" && <Resume />}
                             {section === "github" && <Github />}
+                            {section === "projects" && <Projects setActive={setSection}/>}
                         </Suspense>
                     </motion.main>
                 </>
