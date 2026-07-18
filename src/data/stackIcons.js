@@ -31,6 +31,10 @@
     {
         name: "React",
         src: "/images/stack-icons/react-original.svg"
+    },
+    {
+        name: "Nuxt.js",
+        src: "/images/stack-icons/icon-green.svg"
     }
 ];
 
