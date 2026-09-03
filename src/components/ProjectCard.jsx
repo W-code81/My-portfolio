@@ -41,12 +41,29 @@ function ProjectCard({ id, title, description, image, tags, liveUrl, sourceUrl, 
 
                 {/* links */}
                 <div className="flex items-center gap-4 mt-2">
-                    <a href={liveUrl} target="_blank" className="text-white hover:text-primary font-bold text-sm flex items-center gap-1 transition-colors">
-                        {linkLabel} ↗
-                    </a>
-                    <a href={sourceUrl} target="_blank" className="text-gray-500 hover:text-white text-sm flex items-center gap-1 transition-colors">
-                        &lt;/&gt; Source
-                    </a>
+
+                    {/* updated the condition so if it is a case sudy the link opens a dynamic route else the project url opens in a new tab */}
+                    {linkLabel === "Case Study" ? (
+                        <a href={`/projects/${id}`} className="text-white hover:text-primary font-bold text-sm flex items-center gap-1 transition-colors">
+                            {linkLabel} ↗
+                        </a>
+                    ) : (
+                        liveUrl && (
+                            <a href={liveUrl} target="_blank" className="text-white hover:text-primary font-bold text-sm flex items-center gap-1 transition-colors">
+                                {linkLabel} ↗
+                            </a>
+                        )
+                        )}
+
+                    {/* updated the condition so that if no source url is specified the element doesn't render */}
+                    {
+                        sourceUrl && (
+                            <a href={sourceUrl} target="_blank" className="text-gray-500 hover:text-white text-sm flex items-center gap-1 transition-colors">
+                                &lt;/&gt; Source
+                            </a>
+                        )
+                    }
+
                 </div>
 
             </div>
