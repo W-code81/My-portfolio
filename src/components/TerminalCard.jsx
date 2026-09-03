@@ -31,7 +31,7 @@ function TerminalCard({setActive}) {
 
           <div className="px-3 my-2 mx-3 text-gray-400 space-y-1">
             <p>&gt; Nigerian Developer & UI/UX Designer</p>
-            <p>&gt; 19 years old</p>
+            <p>&gt; 19 and Cracked</p>
             <p>&gt; 2.5 years experience</p>
           </div>
 
