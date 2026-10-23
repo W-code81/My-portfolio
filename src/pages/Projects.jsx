@@ -22,7 +22,10 @@ function Projects({ setActive }) {
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.3 }}
-                            onClick={() => setActive("home")}
+                            onClick={() => {
+                                setActive("home");
+                                window.scrollTo({ top: 0, behavior: "instant" });
+                            }}
                             className="flex items-center gap-2 text-primary/70 hover:text-primary text-sm font-mono tracking-wide mb-4 transition-colors"
                         >
                             ← Back to Home

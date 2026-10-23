@@ -4,7 +4,7 @@ import projects from '../data/projects';
 import { motion } from "motion/react"
 import Button from '../components/Btn.jsx'
 
-function WorkTeaser({setActive}) {
+function WorkTeaser({ setActive }) {
     return (
         <section className="py-24 px-6 bg-bg-dark relative overflow-hidden" id="work">
 
@@ -45,13 +45,16 @@ function WorkTeaser({setActive}) {
             </div>
 
             <div className='flex items-center justify-center mt-8'>
-               <Button
-                text="View All Projects"
-                variant="primary"
-                onClick = {() => setActive("projects")}
-            />  
+                <Button
+                    text="View All Projects"
+                    variant="primary"
+                    onClick={() => {
+                        setActive("projects");
+                        window.scrollTo({ top: 0, behavior: "instant" });
+                    }}
+                />
             </div>
-           
+
 
         </section>
     )

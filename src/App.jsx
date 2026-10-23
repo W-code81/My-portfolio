@@ -45,7 +45,7 @@ function App() {
                             {section === "about" && <AboutMain />}
                             {section === "resume" && <Resume />}
                             {section === "github" && <Github />}
-                            {section === "projects" && <Projects setActive={setSection}/>}
+                            {section === "projects" && <Projects key="projects" setActive={setSection} />}
                         </Suspense>
                     </motion.main>
                 </>
