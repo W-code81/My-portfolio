@@ -6,7 +6,7 @@ const btnInfo = [
     text: "Download CV", icon: Download, variant: "secondary",
     onClick: () => {
       const link = document.createElement("a");
-      link.href = "/pdf/My_Resume.pdf";
+      link.href = "/pdf/Aderogba_Oluwadamilola_Resume (1).pdf";
       link.download = "My_Resume.pdf";
       document.body.appendChild(link);
       link.click();
