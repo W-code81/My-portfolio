@@ -29,6 +29,16 @@ const projects = [
     sourceUrl: "",
     // linkLabel: "Case Study",
   },
+   {
+    id: "IOT",
+    title: "IoT",
+    description: "Built the user interface for an IOT smart home system",
+    image: "/images/IOT.png",
+    tags: ["Nuxt", "Typesciprt", "Tailwind"],
+    liveUrl: "",
+    sourceUrl: "",
+    linkLabel: "",
+  },
   {
     id: "writeUp",
     title: "WriteUp",
