@@ -29,6 +29,16 @@ const projects = [
     sourceUrl: "",
     // linkLabel: "Case Study",
   },
+  {
+    id: "shiftconference",
+    title: "SHIFT Conference",
+    description: "Developed the website and registration management system for the NCBC SHIFT Conference camp.",
+    image: "/images/shift.png",
+    tags: ["TypeScript", "Next.js", "Paystack"],
+    liveUrl: "https://shiftconference.app",
+    sourceUrl: "",
+    linkLabel: "",
+  },
    {
     id: "IOT",
     title: "IoT",
@@ -37,7 +47,7 @@ const projects = [
     tags: ["Nuxt", "Typesciprt", "Tailwind"],
     liveUrl: "",
     sourceUrl: "",
-    linkLabel: "",
+    linkLabel: "Live",
   },
   {
     id: "writeUp",
