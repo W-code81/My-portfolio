@@ -1,4 +1,14 @@
 const projects = [
+   {
+    id: "shiftconference",
+    title: "SHIFT Conference",
+    description: "Developed the website and registration management system for the NCBC SHIFT Conference camp.",
+    image: "/images/shift.png",
+    tags: ["TypeScript", "Next.js", "Paystack"],
+    liveUrl: "https://shiftconference.app",
+    sourceUrl: "",
+    linkLabel: "Live Demo",
+  },
   {
     id: "magnificent-gate-global",
     title: "Magnificent Gate Global",
@@ -28,16 +38,6 @@ const projects = [
     liveUrl: "",
     sourceUrl: "",
     // linkLabel: "Case Study",
-  },
-  {
-    id: "shiftconference",
-    title: "SHIFT Conference",
-    description: "Developed the website and registration management system for the NCBC SHIFT Conference camp.",
-    image: "/images/shift.png",
-    tags: ["TypeScript", "Next.js", "Paystack"],
-    liveUrl: "https://shiftconference.app",
-    sourceUrl: "",
-    linkLabel: "",
   },
    {
     id: "IOT",
